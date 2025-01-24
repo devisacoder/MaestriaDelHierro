@@ -1,8 +1,12 @@
-<div class="w-full bg-azulPetroleo justify-between flex items-center">
-    <div class="bg-white w-96 h-96">imagen</div>
+---
+import { items } from "./images"
+import CreateImageGallery from "./createImageGallery.astro";
+---
 
-    <div class="text-4xl w-1/2 flex gap-28 flex-col">
-        <h2 class="text-6xl text font-extrabold w-17">Servicio dentro y fuera de <span class="text-yellow flex"> Bogotá</span></h2> 
+<div class="w-full py-60 bg-azulPetroleo justify-between flex items-center">
+    <CreateImageGallery items={items}/>
+    <div class="text-4xl w-[820px] gap-28 text-grisOscuro flex-col flex justify-center">
+        <h2 class="text-6xl text font-extrabold w-17">Servicio dentro y fuera de <span class="text-yellow flex flex-col items-center"> Bogotá</span></h2> 
         <p class="text-4xl">Fabricamos ventanas, portones electricos, marquesinas, puertas de seguridad, estructura liviana y pesada y todo lo relacionado con la rama </p>
     </div>
 </div>

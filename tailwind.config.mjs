@@ -6,12 +6,10 @@ export default {
 			colors: {
 				yellow: '#FC9B3C',
 				azulPetroleo: '#222C35',
-<<<<<<< HEAD
 				grisClaro: '#B6B6B6',
-				grisOscuro: '#B6B6B6'
-=======
+				grisOscuro: '#B6B6B6',
 				yellow_two:"#fcaf3c"
->>>>>>> development
+
 			},
 		},
 	},
