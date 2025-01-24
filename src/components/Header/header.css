@@ -1,0 +1,18 @@
+.title{
+    text-decoration: underline #FC9B3C 2px;
+    text-underline-offset: 4px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 3px rgb(0, 0, 0);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-shadow: 1px 2px 0px rgb(70, 67, 67);
+  }
+  
+  .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+  }
