@@ -1,6 +1,6 @@
 .maestria{
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
 }
 
 .show-maestria{
@@ -9,7 +9,7 @@
 
 .nav-links{
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 2s ease;
 }
 
 .show-links{
