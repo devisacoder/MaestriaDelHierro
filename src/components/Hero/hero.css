@@ -12,18 +12,26 @@
     position: absolute;
     top: 25%;
     left: 10%;
-    transform: translateX(-50%);
-    transition: all 1.2s ease-in-out, opacity 3s ease; 
-    opacity: 0; 
   }
 
-.hero-text.show{
+.hero-title{
+    transform: translateY(80%);
+    transition: all 1.2s ease-in-out, opacity 2s ease;
+    opacity: 0; 
+}
+
+.container-sub-title{
+    transition: opacity 2s ease;
+    opacity: 0; 
+}
+
+.hero-title.show{
     transform: translateX(0);
     opacity: 1;
 }
 
-.hidden{
-    opacity: 0;
+.show-subtitles{
+    opacity: 1;
 }
 
 .hero-container img {
