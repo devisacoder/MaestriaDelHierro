@@ -5,7 +5,8 @@ export default {
 		extend: {
 			colors: {
 				yellow: '#FC9B3C',
-				azulPetroleo: '#222C35'
+				azulPetroleo: '#222C35',
+				yellow_two:"#fcaf3c"
 			},
 		},
 	},
