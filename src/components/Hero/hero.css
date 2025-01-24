@@ -21,7 +21,7 @@
 }
 
 .container-sub-title{
-    transition: opacity 2s ease;
+    transition: opacity 3s ease;
     opacity: 0; 
 }
 
