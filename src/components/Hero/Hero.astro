@@ -1,0 +1,31 @@
+---
+import "./hero.css"
+---
+<div 
+id="hero"
+class="hero-container w-full relative flex justify-center items-center mt-[105px] bg-black">
+    <img 
+        src="/public/assets/video-7.webp" 
+        alt="img-hero"
+        class="w-[100px] h-auto"
+    />
+    <div class="hero-text absolute">
+        <h1 class=" hero-title text-white/90 text-7xl font-bold">
+            <span class="text-yellow_two">+30</span> años de experiencia
+        </h1>
+        <div class="container-sub-title">
+            <p class="text-white/90 text-5xl mt-20">Más de 2000 clientes</p>
+            <p class="text-white/90 text-5xl mt-8">A lo largo de Bogotá y Colombia.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const textHero = document.querySelector(".hero-title");
+    const subTitles = document.querySelector(".container-sub-title");
+
+    document.addEventListener("DOMContentLoaded", ()=>{
+        textHero?.classList.add("show");
+        subTitles?.classList.add("show-subtitles")
+    })
+</script>

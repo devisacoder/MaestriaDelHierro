@@ -1,0 +1,40 @@
+---
+import "./header.css"
+---
+
+<header class="flex items-center bg-azulPetroleo fixed w-full z-[1000] py-4 px-6 container-header">
+    <div class="flex items-center ml-[150px] justify-center w-auto p-2 maestria">
+      <img src="/public/assets/logo-5.WEBP" 
+        alt="logo" 
+        class="w-[60px] h-auto" />
+      <h1 class="title text-white">MAESTRÍA DEL HIERRO</h1>
+    </div>
+    
+    <nav class="flex flex-grow justify-end nav-links">
+      <ul class="flex text-yellow gap-[50px] h-[30px] justify-center items-center font-semibold mr-[150px]">
+        <li class=" inline nav-link">
+            <a href="#hero" class=" text-[20px] ">Inicio</a>
+        </li>
+        <li class=" inline nav-link">
+            <a href="#About-us" class=" text-[20px] ">Nosotros</a>
+        </li>
+        <li class=" inline nav-link">
+            <a href="#portfolio" class=" text-[20px] ">Portfolio</a>
+        </li>
+        <li class=" inline nav-link">
+            <a href="#contacto" class=" text-[20px] ">Contáctenos</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <script>
+    const maestria = document.querySelector(".maestria");
+    const links = document.querySelector(".nav-links");
+
+    document.addEventListener("DOMContentLoaded",()=>{
+      maestria?.classList.add("show-maestria")
+      links?.classList.add("show-links")
+    })
+  </script>

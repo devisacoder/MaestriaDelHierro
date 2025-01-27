@@ -1,0 +1,9 @@
+---
+const { items } = Astro.props
+---
+
+<div id="scroll-container">
+    {items.map((item) => (
+        <img src={item.src} alt={item.alt} class=""/>
+    ))}
+</div>
