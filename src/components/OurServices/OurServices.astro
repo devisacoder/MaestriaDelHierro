@@ -1,0 +1,21 @@
+---
+import { items } from "./images";
+---
+
+<div class="h-full bg-azulPetroleo flex justify-between">
+    <div id="scroll-container" class="">
+        {items.map((item) => ( 
+            <section>
+                <img src={item.src} alt={item.alt}/>
+            </section>
+        ))}
+    </div>
+    <div class="w-[820px] flex flex-col justify-center h-[300px] sticky top-[300px]">
+        <h2 class="text-6xl font-extrabold text-grisOscuro">
+        Servicio dentro y fuera de <span class="text-yellow">Bogotá</span>
+        </h2>
+        <p class="text-4xl text-grisOscuro mt-8">
+        Fabricamos ventanas, portones eléctricos, marquesinas, puertas de seguridad, estructura liviana y pesada y todo lo relacionado con la rama.
+        </p>
+    </div>
+</div>
