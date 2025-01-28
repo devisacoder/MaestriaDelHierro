@@ -2,10 +2,10 @@
 import "./about.css";
 ---
 <div id="About-us"
-    class="w-full h-[700px] about flex flex-col items-center overflow-hidden justify-center">
-        <h2 class="text-grisClaro text-7xl font-bold title-about">
+    class="w-full h-[500px] about flex flex-col items-center overflow-hidden justify-center py-96">
+        <h2 id="titleAboutUs" class="text-grisClaro text-7xl font-bold title-about">
             Quienes <span class="text-yellow">Somos</span></h2>
-        <p class="w-4/6 text-grisClaro text-3xl text-about font-bold text-center "> 
+        <p id="textAbout" class="w-4/6 text-grisClaro text-3xl text-about font-bold text-center "> 
             En Maestría del Hierro, llevamos más de 30 años de experiencia perfeccionando
             el arte de la ornamentación y la soldadura en todas sus formas.
             Somos una empresa que combina tradición, innovación y excelencia,
@@ -13,3 +13,29 @@ import "./about.css";
             expectativas de nuestros clientes.
         </p>    
 </div>
+
+<script>
+    const title = document.getElementById("titleAboutUs");
+    const text = document.getElementById("textAbout");
+    const about = document.getElementById("About-us");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio >= 0.20) {
+                title?.classList.add("title-is-visible");
+                text?.classList.add("text-is-visible");
+            } else {
+                title?.classList.remove("title-is-visible");
+                text?.classList.remove("text-is-visible");
+            }
+        });
+    }, {
+        threshold: 0.20,
+    });
+
+    observer.observe(about)
+
+    window.addEventListener("hashchange", () => {
+        observer.observe(about);
+    });
+</script>

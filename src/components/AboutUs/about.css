@@ -4,14 +4,32 @@
 
 .title-about{
     text-shadow: 1px 2px 1px rgb(245, 239, 239);
+    transform: translateX(50%);
+    opacity: 0;
+    transition: ease 0.5s;
 }
 
 .text-about{
     text-shadow: 3px 2px 10px rgb(8, 8, 8);
     margin-top: 50px;
     line-height: 1.5;
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: ease 0.5s;
 }
 
 .text-second{
     text-shadow: 3px 2px 10px rgb(0, 0, 0);
+}
+
+.title-is-visible{
+    transform: translate(0);
+    transition: ease 1s;
+    opacity: 1;
+}
+
+.text-is-visible{
+    transform: translateX(0);
+    transition: ease 1s;
+    opacity: 1;
 }
