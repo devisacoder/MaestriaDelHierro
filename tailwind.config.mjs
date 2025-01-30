@@ -8,8 +8,8 @@ export default {
 				azulPetroleo: '#222C35',
 				grisClaro: '#B6B6B6',
 				grisOscuro: '#B6B6B6',
-				yellow_two:"#fcaf3c"
-
+				yellow_two:"#fcaf3c",
+				custom_yellow:"#f9a34f"
 			},
 		},
 	},
