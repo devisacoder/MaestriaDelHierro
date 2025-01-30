@@ -1,8 +1,8 @@
 ---
 import "./about.css";
 ---
-<div id="About-us"
-    class="w-full h-[500px] about flex flex-col items-center overflow-hidden justify-center py-96">
+<div id="nosotros"
+    class="w-full h-auto about flex flex-col items-center overflow-hidden justify-center py-28">
         <h2 id="titleAboutUs" class="text-grisClaro text-7xl font-bold title-about">
             Quienes <span class="text-yellow">Somos</span></h2>
         <p id="textAbout" class="w-4/6 text-grisClaro text-3xl text-about font-bold text-center "> 
@@ -15,22 +15,22 @@ import "./about.css";
 </div>
 
 <script>
-    const title = document.getElementById("titleAboutUs");
+    const titleAbout = document.getElementById("titleAboutUs");
     const text = document.getElementById("textAbout");
-    const about = document.getElementById("About-us");
-
+    const about = document.getElementById("nosotros");
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio >= 0.20) {
-                title?.classList.add("title-is-visible");
+            if (entry.intersectionRatio >= 0.40) {
+                titleAbout?.classList.add("title-is-visible");
                 text?.classList.add("text-is-visible");
             } else {
-                title?.classList.remove("title-is-visible");
+                titleAbout?.classList.remove("title-is-visible");
                 text?.classList.remove("text-is-visible");
             }
         });
     }, {
-        threshold: 0.20,
+        threshold: 0.40,
     });
 
     observer.observe(about)

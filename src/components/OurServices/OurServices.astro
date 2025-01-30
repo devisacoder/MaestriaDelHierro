@@ -1,21 +1,42 @@
 ---
 import { items } from "./images";
+import "./OurServices.css";
 ---
 
-<div class="h-full bg-azulPetroleo flex justify-between">
-    <div id="scroll-container" class="">
-        {items.map((item) => ( 
-            <section>
-                <img src={item.src} alt={item.alt}/>
-            </section>
-        ))}
-    </div>
-    <div class="w-[820px] flex flex-col justify-center h-[300px] sticky top-[300px]">
-        <h2 class="text-6xl font-extrabold text-grisOscuro">
+<div id="servicios" class="h-full bg-azulPetroleo flex justify-center gap-x-32">
+    <div id="scroll-container" class="w-2/4 h-full flex justify-center items-center">
+        <section 
+            class="grid grid-cols-3 gap-4 p-4 wrapper py-8">
+            {items.map((item) => (
+                <img
+                    class="w-48 h-48 rounded-lg shadow-md images-example"
+                    src={item.src}
+                    alt={item.alt}
+                />
+            ))}
+        </section>
+    </div>    
+    <div id="service" class="w-[820px] flex flex-col justify-center h-[300px] service">
+        <h2 class="text-7xl font-extrabold text-grisOscuro mr-10  title-service">
         Servicio dentro y fuera de <span class="text-yellow">Bogotá</span>
         </h2>
-        <p class="text-4xl text-grisOscuro mt-8">
+        <p class="text-3xl text-grisOscuro mt-8 flex flex-wrap w-3/4">
         Fabricamos ventanas, portones eléctricos, marquesinas, puertas de seguridad, estructura liviana y pesada y todo lo relacionado con la rama.
         </p>
     </div>
 </div>
+<script>
+    const service = document.getElementById("service");
+    const parallaxLimit = 1200;
+
+    window.addEventListener("scroll", ()=>{
+        const scroll = window.scrollY;
+        if(service){
+            if(scroll <= parallaxLimit){
+                service.style.transform = `translateY(${scroll * 0.2}px)`;
+                }
+            }else{
+                service.style.transform = `translateY(${parallaxLimit}px)`;
+            }
+    });
+</script>
