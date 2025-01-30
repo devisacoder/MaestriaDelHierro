@@ -10,6 +10,12 @@ export default {
 				grisOscuro: '#B6B6B6',
 				yellow_two:"#fcaf3c",
 				custom_yellow:"#f9a34f"
+			},  
+			fontFamily: {
+				sans: ['Roboto', 'sans-serif'], 
+				work: ['Work Sans', 'sans-serif'], 
+				sawarabi: ['Sawarabi Mincho', 'serif'],
+				raleway: ['Releway', 'serif']
 			},
 		},
 	},
