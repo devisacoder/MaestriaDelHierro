@@ -1,0 +1,77 @@
+.container-img-portfolio {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 120px);
+}
+
+.img-1 {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.img-2 {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+
+.img-3 {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.img-4 {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.img-5 {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.img-6 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.img-7 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.container-tarjet{
+    position: absolute;
+    opacity: 0;
+    transition: ease-in .3s;
+}
+
+.tarjet-info{
+    background-color: rgba(0, 0, 0, 0.788);
+    transform: translateY(100%);
+}
+
+.container-tarjet:hover{
+    opacity: 1;
+}
+
+.button-tarjet {
+    border: 2px solid #FC9B3C;
+}
+
+.button-tarjet:hover{
+    background-color: #FC9B3C;
+    color: black;
+}
+
+.title-portfolio{
+    opacity: 5%;
+    transform: translateY(-50%);
+    transition: ease 1s;
+}
+
+.title-is-visible{
+    transition: ease .5s;
+    opacity: 1;
+    transform: translateY(0);
+}
