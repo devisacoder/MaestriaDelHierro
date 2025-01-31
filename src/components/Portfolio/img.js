@@ -1,37 +1,37 @@
 export const itemsImg = [
     { 
-      src: "/assets/e1-1.webp", 
-      alt: "Estructura Pesada", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      src: "/assets/parqueInfantil.webp", 
+      alt: "Parque infantil", 
+      description: "Parque infantil hecho con "
     },
-    { 
+    {
       src: "/assets/p1-1.webp", 
-      alt: "Portón", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      alt: "Puerta negra", 
+      description: "Puerta negra con detalles metalicos plateados, con un diseño que simula la madera" 
     },
-    { 
+    {  
       src: "/assets/v1-1.webp", 
-      alt: "Puerta 1", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      alt: "Ventana blanca", 
+      description:"Ventana blanca con una rejilla de diseño antiguo, que le da un toque peculiar"
     },
     { 
       src: "/assets/e2-2.webp", 
-      alt: "Ventana Cuadrada", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      alt: "Escalera sencilla", 
+      description:"Escalera sencilla, con escalones delgados que le dan un toque de ligereza" 
     },
     { 
-      src: "/assets/p2-2.webp", 
-      alt: "Ventana",
-       description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      src: "/assets/techo.webp", 
+      alt: "Marquesina",
+       description:"Marquesina con techo de policarbonato para la entrada de una torre de conjunto" 
     },
     { 
       src: "/assets/v2-2.webp", 
-      alt: "Puerta Flecha", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      alt: "Puerta rejilla", 
+      description: "Puerta con rejilla de disenio" 
     },
     { 
-      src: "/assets/p3-3.webp", 
-      alt: "Puerta Flecha", 
-      description:"lkjdajsdjkñsñldksañkdñasñdkñaskdñkñaskdñlkaskdañskdñkñaskdañskdñaskdñkañskdñaskdñqaks" 
+      src: "/assets/puertaYVentanaDeAluminio.webp", 
+      alt: "Porton de garaje", 
+      description:"Porton para garaje blanco grande" 
     },
   ];

@@ -6,10 +6,7 @@ const getClassName = (index) => `img-${index + 1}`;
 ---
 
 <section id="portfolio" class="w-full bg-azulPetroleo flex flex-col items-center justify-center p-8">
-        <h1 id="title-portfolio" class="text-yellow text-7xl font-bold py-16 title-portfolio"> 
-            Nuestros <span class="text-grisClaro">Trabajos</span>
-        </h1> 
-    <ul class="w-5/6 grid grid-cols-4 grid-rows-4 gap-2 pb-8 container-img-portfolio">
+    <ul class="w-5/6 grid grid-cols-4 grid-rows-4 pb-8 container-img-portfolio">
         {itemsImg.map((item, index) => (
             <li key={index} class={`${getClassName(index)} relative overflow-hidden rounded-lg shadow-sm shadow-black`}>
                 <img
@@ -18,15 +15,16 @@ const getClassName = (index) => `img-${index + 1}`;
                  alt={item.alt}
                 />
                 <div class="w-full inset-0 h-full container-tarjet">
-                    <div class="inset-0 w-full h-2/4 bg-black/70 absolute tarjet-info flex">
-                        <div class="flex felx-col text-grisClaro w-[70%] overflow-hidden flex-col">
-                            <h3 class="text-2xl font-bold px-4 pt-2">{item.alt}</h3>
-                            <p class="text-lg break-words whitespace-normal truncate px-4 pt-2">{item.description}</p>
+                    <div class="inset-0 w-full h-2/4 bg-black/70 absolute tarjet-info flex flex-col p-4">
+                        <div class="flex text-white w-full h-full overflow-hidden flex-col pt-2">
+                            <h3 class="text-2xl font-bold">{item.alt}</h3>
+                            <p class="text-grisClaro text-lg break-words whitespace-normal truncate">{item.description}</p>
                         </div>
-                        <div class=" w-[30%]">
+                        <div class=" ml-auto">
                             <button 
-                             class="button-tarjet flex text-grisClaro font-bold text-md ml-auto p-2 mt-8 mr-2">
-                             ver mas
+                                class="button-tarjet self-end text-grisClaro text-[14px] w-[90px] h-[30px] "
+                            >
+                                Ver más
                             </button>
                         </div>
                     </div>
@@ -34,6 +32,13 @@ const getClassName = (index) => `img-${index + 1}`;
             </li>
         ))}
     </ul> 
+    <div class="flex justify-center">
+        <button 
+            class="button-tarjet self-end text-grisClaro w-[168px] h-[51px] text-[24px]"
+        >
+            Ver más
+        </button>
+    </div>
 </section>
 
 <script>

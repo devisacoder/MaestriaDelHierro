@@ -17,6 +17,9 @@ export default {
 				sawarabi: ['Sawarabi Mincho', 'serif'],
 				raleway: ['Releway', 'serif']
 			},
+			boxShadow: {
+				custom: '0 4px 10px rgba(0, 0, 0, 0.20)',
+			  }
 		},
 	},
 	plugins: [],
