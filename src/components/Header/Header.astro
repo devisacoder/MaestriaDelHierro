@@ -1,45 +1,29 @@
 ---
 import "./header.css"
 ---
-
-<header  class="flex items-center shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-6 container-header">
-  <div class="flex items-center ml-[150px] justify-center w-auto p-2 maestria">
-    <a href="#inicio">
-      <img src="/public/assets/logo-5.WEBP" 
-        alt="logo" 
+<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-36 py-3">
+  <div class="flex items-center p-2">
+    <a href="#inicio" aria-label="Ir al inicio">
+      <img src="/public/assets/logo.WEBP" 
+        alt="Logo de Maestría del Hierro" 
         class="w-[60px] h-auto" />
     </a> 
-    <h1 class="title text-white font-sawarabi">MAESTRÍA DEL HIERRO</h1>
+    <h1 class="text-white font-sawarabi text-[12px]">MAESTRÍA DEL HIERRO</h1>
   </div>
   
-  <nav class="flex flex-grow justify-end nav-links">
-    <ul class="flex text-yellow text-[25px] font-roboto gap-[70px] h-[30px] justify-center items-center font-semibold mr-[150px]">
-      <li class=" inline nav-link">
-          <a href="#inicio">Inicio</a>
-      </li>
-      <li class=" inline nav-link">
-        <a href="#servicios">Servicios</a>
-      </li>
-      <li class=" inline nav-link">
-          <a href="#nosotros">Nosotros</a>
-      </li> 
-      <li class=" inline nav-link">
-          <a href="#portfolio">Portfolio</a>
-      </li>
-      <li class=" inline nav-link">
-          <a href="#contacto">Contáctenos</a>
-      </li>
+  <nav aria-label="Menú principal">
+    <ul class="flex text-grisClaro text-xl gap-20 font-roboto font-regular ">
+      <li><a href="#inicio" class="hover:text-yellow transition-all">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-yellow transition-all">Servicios</a></li>
+      <li><a href="#nosotros" class="hover:text-yellow transition-all">Nosotros</a></li> 
+      <li><a href="#portfolio" class="hover:text-yellow transition-all">Portfolio</a></li>
+      <li><a href="#contacto" class="hover:text-yellow transition-all">Contáctenos</a></li>
     </ul>
   </nav>
-
 </header>
 
 <script>
-  const maestria = document.querySelector(".maestria");
-  const links = document.querySelector(".nav-links");
-
-  document.addEventListener("DOMContentLoaded",()=>{
-    maestria?.classList.add("show-maestria")
-    links?.classList.add("show-links")
-  })
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("header")?.classList.add("opacity-100", "transition-opacity", "duration-700");
+  });
 </script>

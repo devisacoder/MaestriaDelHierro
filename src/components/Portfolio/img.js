@@ -5,17 +5,17 @@ export const itemsImg = [
       description: "Parque infantil hecho con "
     },
     {
-      src: "/assets/p1-1.webp", 
+      src: "/assets/puertaNegra.webp", 
       alt: "Puerta negra", 
       description: "Puerta negra con detalles metalicos plateados, con un diseño que simula la madera" 
     },
     {  
-      src: "/assets/v1-1.webp", 
+      src: "/assets/ventanaBlanca.webp", 
       alt: "Ventana blanca", 
       description:"Ventana blanca con una rejilla de diseño antiguo, que le da un toque peculiar"
     },
     { 
-      src: "/assets/e2-2.webp", 
+      src: "/assets/escaleraDelgada.webp", 
       alt: "Escalera sencilla", 
       description:"Escalera sencilla, con escalones delgados que le dan un toque de ligereza" 
     },
@@ -25,7 +25,7 @@ export const itemsImg = [
        description:"Marquesina con techo de policarbonato para la entrada de una torre de conjunto" 
     },
     { 
-      src: "/assets/v2-2.webp", 
+      src: "/assets/puertaDisenio.webp", 
       alt: "Puerta rejilla", 
       description: "Puerta con rejilla de disenio" 
     },

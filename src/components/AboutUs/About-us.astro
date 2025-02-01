@@ -1,38 +1,26 @@
 ---
 import "./about.css";
 ---
-<div id="nosotros"
-    class="w-full h-auto about  flex flex-col items-center overflow-hidden justify-center py-20"
+<section id="nosotros"
+    class="w-full h-auto flex flex-col items-center overflow-hidden justify-center py-20"
+    aria-labelledby="titleAboutUs"
 >
-        <h2 id="titleAboutUs" class="text-grisClaro font-sans text-[96px] font-extrabold title-about">
-            Quienes <span class="text-yellow">Somos</span></h2>
-        <p id="textAbout" class="w-4/6 text-grisClaro text-[40px] text-about font-bold text-center "> 
-            En Maestría del Hierro, contamos con más de 30 años de experiencia perfeccionando la ornamentación y soldadura. Combinamos tradición, innovación y excelencia para ofrecer soluciones personalizadas y duraderas que superan expectativas.
-        </p>    
-</div>
+    <h1 id="titleAboutUs" class="text-grisClaro font-sans text-[96px] font-extrabold">
+        Quiénes <span class="text-yellow">Somos</span>
+    </h1>
+    <p id="textAbout" class="w-4/6 text-grisClaro text-[40px] font-bold text-center">
+        En <strong>Maestría del Hierro</strong>, contamos con más de 30 años de experiencia perfeccionando la ornamentación y soldadura. 
+        Combinamos tradición, innovación y excelencia para ofrecer soluciones personalizadas y duraderas que superan expectativas.
+    </p>    
+</section>
 
 <script>
-    const titleAbout = document.getElementById("titleAboutUs");
-    const text = document.getElementById("textAbout");
-    const about = document.getElementById("nosotros");
-    
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio >= 0.40) {
-                titleAbout?.classList.add("title-is-visible");
-                text?.classList.add("text-is-visible");
-            } else {
-                titleAbout?.classList.remove("title-is-visible");
-                text?.classList.remove("text-is-visible");
-            }
+            document.getElementById("titleAboutUs").classList.toggle("title-is-visible", entry.isIntersecting);
+            document.getElementById("textAbout").classList.toggle("text-is-visible", entry.isIntersecting);
         });
-    }, {
-        threshold: 0.40,
-    });
+    }, { threshold: 0.40 });
 
-    observer.observe(about)
-
-    window.addEventListener("hashchange", () => {
-        observer.observe(about);
-    });
+    observer.observe(document.getElementById("nosotros"));
 </script>
