@@ -1,8 +1,11 @@
 export const items = [
-  { src: "/assets/estructura.png", alt: "Estructura Pesada" },
-  { src: "/assets/porton.png", alt: "Portón" },
-  { src: "/assets/puerta.png", alt: "Puerta 1" },
-  { src: "/assets/ventanaCuadrada.png", alt: "Ventana Cuadrada" },
-  { src: "/assets/ventana.png", alt: "Ventana" },
-  { src: "/assets/puertaFlecha.png", alt: "Puerta Flecha" },
+  { src: "/assets/escaleraGruesa.webp", alt: "Estructura Pesada" },
+  { src: "/assets/puertaNegra.webp", alt: "Portón" },
+  { src: "/assets/ventanaBlanca.webp", alt: "Puerta 1" },
+  { src: "/assets/escaleraDelgada.webp", alt: "Ventana Cuadrada" },
+  { src: "/assets/puertaCuadros.webp", alt: "Ventana" },
+  { src: "/assets/puertaDisenio.webp", alt: "Puerta Flecha" },
+  { src: "/assets/rejaDeSeguridad.webp", alt: "Reja de seguridad" },
+  { src: "/assets/escaleraAlta.webp", alt: "Escalera alta" },
+  { src: "/assets/portonGaraje.webp", alt: "Reja de garaje" },
 ];

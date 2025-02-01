@@ -8,9 +8,20 @@ export default {
 				azulPetroleo: '#222C35',
 				grisClaro: '#B6B6B6',
 				grisOscuro: '#B6B6B6',
-				yellow_two:"#fcaf3c"
-
+				yellow_two:"#fcaf3c",
+				custom_yellow:"#f9a34f",
+				grayBackground: "#D9D9D9"
+			},  
+			fontFamily: {
+				sans: ['Roboto', 'sans-serif'], 
+				work: ['Work Sans', 'sans-serif'], 
+				sawarabi: ['Sawarabi Mincho', 'serif'],
+				raleway: ['Releway', 'serif'],
+				robotoSlab: ['Roboto Slab', 'serif']
 			},
+			boxShadow: {
+				custom: '0 4px 10px rgba(0, 0, 0, 0.20)',
+			  }
 		},
 	},
 	plugins: [],
