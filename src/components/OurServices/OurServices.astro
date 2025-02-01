@@ -1,0 +1,47 @@
+---
+import { items } from "./images";
+import "./OurServices.css";
+import Image from "astro/components/Image.astro";
+
+---
+
+<section id="servicios" class="h-full bg-azulPetroleo flex justify-center gap-48 py-20">
+    <div id="scroll-container" class="w-1/3 h-full flex justify-center items-center">
+        <article 
+            class="grid grid-cols-3 gap-4 p-4 wrapper py-8">
+            {items.map((item) => (
+                <Image
+                    class="w-48 h-48 rounded-lg shadow-md images-example"
+                    src={item.src}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    alt={`Imagen de servicio: ${item.alt}`}
+                    />
+            ))}
+        </article>
+    </div>    
+    <article id="service" class="w-[820px]  flex flex-col justify-center h-[300px] service">
+        <h2 class="text-[70px] font-black font-raleway text-grisOscuro mtitle-service ">
+        Servicio dentro y fuera de <span class="flex justify-center text-yellow">Bogotá</span>
+        </h2>
+        <p class="text-[38px] font-sans font-regular text-grisOscuro mt-8 flex flex-wrap text-center">
+        Fabricamos ventanas, portones eléctricos, marquesinas, puertas de seguridad, estructura liviana, pesada, cortinas, techos y todo lo relacionado con la rama.
+        </p>
+    </article>
+</section>
+<script>
+    const service = document.getElementById("service");
+    const parallaxLimit = 1200;
+
+    window.addEventListener("scroll", ()=>{
+        const scroll = window.scrollY;
+        if(service){
+            if(scroll <= parallaxLimit){
+                service.style.transform = `translateY(${scroll * 0.2}px)`;
+                }
+            }else{
+                service.style.transform = `translateY(${parallaxLimit}px)`;
+            }
+    });
+</script>

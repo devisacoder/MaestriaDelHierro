@@ -1,0 +1,10 @@
+.wrapper:hover :not(.images-example:hover){
+    opacity: 0.1;
+    transition: ease .8s;
+}
+
+.images-example:hover{
+    transform: scale(1.8);
+    transition: ease .8s;
+    opacity: 1;
+}

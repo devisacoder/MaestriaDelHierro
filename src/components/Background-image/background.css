@@ -1,0 +1,17 @@
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: -20;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.soldador {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+}

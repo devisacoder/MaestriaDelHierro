@@ -1,0 +1,29 @@
+---
+import "./header.css"
+---
+<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-36 py-3">
+  <div class="flex items-center p-2">
+    <a href="#inicio" aria-label="Ir al inicio">
+      <img src="/public/assets/logo.WEBP" 
+        alt="Logo de Maestría del Hierro" 
+        class="w-[60px] h-auto" />
+    </a> 
+    <h1 class="text-white font-sawarabi text-[12px]">MAESTRÍA DEL HIERRO</h1>
+  </div>
+  
+  <nav aria-label="Menú principal">
+    <ul class="flex text-grisClaro text-xl gap-20 font-roboto font-regular ">
+      <li><a href="#inicio" class="hover:text-yellow transition-all">Inicio</a></li>
+      <li><a href="#servicios" class="hover:text-yellow transition-all">Servicios</a></li>
+      <li><a href="#nosotros" class="hover:text-yellow transition-all">Nosotros</a></li> 
+      <li><a href="#portfolio" class="hover:text-yellow transition-all">Portfolio</a></li>
+      <li><a href="#contacto" class="hover:text-yellow transition-all">Contáctenos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("header")?.classList.add("opacity-100", "transition-opacity", "duration-700");
+  });
+</script>
