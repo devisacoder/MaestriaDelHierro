@@ -1,29 +1,51 @@
 ---
 import "./header.css"
+import Image from "astro/components/Image.astro";
 ---
-<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-36 py-3">
-  <div class="flex items-center p-2">
+<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8 py-2">
+  <div class="flex items-center">
     <a href="#inicio" aria-label="Ir al inicio">
-      <img src="/public/assets/logo.WEBP" 
+      <Image src="/public/assets/logo.WEBP" 
         alt="Logo de Maestría del Hierro" 
-        class="w-[60px] h-auto" />
+        class="w-[40px] sm:w-[50px] md:w-[60px]"
+        width={100}
+        height={100}
+        loading={"eager"}
+       />
     </a> 
-    <h1 class="text-white font-sawarabi text-[12px]">MAESTRÍA DEL HIERRO</h1>
+    <h1 class="text-grisClaro text-[10px] sm:text-[12px] lg:text-[16px] ml-2 hidden lg:block">
+      MAESTRÍA DEL HIERRO
+    </h1>
   </div>
   
-  <nav aria-label="Menú principal">
-    <ul class="flex text-grisClaro text-xl gap-20 font-roboto font-regular ">
-      <li><a href="#inicio" class="hover:text-yellow transition-all">Inicio</a></li>
-      <li><a href="#servicios" class="hover:text-yellow transition-all">Servicios</a></li>
-      <li><a href="#nosotros" class="hover:text-yellow transition-all">Nosotros</a></li> 
-      <li><a href="#portfolio" class="hover:text-yellow transition-all">Portfolio</a></li>
-      <li><a href="#contacto" class="hover:text-yellow transition-all">Contáctenos</a></li>
+  <!-- Botón del menú hamburguesa (aparece en móviles) -->
+  <button id="menu-toggle" class="sm:hidden text-white text-[24px]">
+    ☰
+  </button>
+
+  <!-- Menú de navegación -->
+  <nav id="nav-menu" class="hidden sm:flex absolute sm:relative top-[60px] sm:top-0 right-0 bg-azulPetroleo sm:bg-transparent w-full sm:w-auto flex-col sm:flex-row text-center sm:text-left">
+    <ul class="flex flex-col sm:flex-row text-grisClaro text-[14px] sm:text-[18px] lg:text-[20px] gap-3 sm:gap-6 p-4 sm:p-0 font-roboto">
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="#nosotros" class="nav-link">Nosotros</a></li> 
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#contacto" class="nav-link">Contáctenos</a></li>
     </ul>
   </nav>
 </header>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("header")?.classList.add("opacity-100", "transition-opacity", "duration-700");
+    const header = document.querySelector("header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    header.classList.add("opacity-100", "transition-opacity", "duration-700");
+
+    // Menú hamburguesa en móviles
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
   });
 </script>

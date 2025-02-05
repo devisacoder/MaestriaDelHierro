@@ -2,7 +2,7 @@ export const itemsImg = [
     { 
       src: "/assets/parqueInfantil.webp", 
       alt: "Parque infantil", 
-      description: "Parque infantil hecho con "
+      description: "Parque infantil hecho con hierro fundido  y pintado con pintura azul"
     },
     {
       src: "/assets/puertaNegra.webp", 
