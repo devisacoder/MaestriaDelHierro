@@ -7,7 +7,7 @@ const getClassName = (index) => `img-${index + 1}`;
 ---
 <section id="portfolio" class="w-full bg-azulPetroleo flex flex-col items-center justify-center py-8 lg:py-2 md:py-2 ">
     <h1 class="text-yellow font-sans text-[26px] md:text-[30px] lg:text-[48px] font-semibold p-6 tracking-wide">Proyectos</h1>
-    <ul class="w-[90%] grid grid-cols-4 grid-rows-4 container-img-portfolio">
+    <ul class="w-[90%] cursor-pointer grid grid-cols-4 grid-rows-4 container-img-portfolio">
 
         {itemsImg.map((item, index) => (
             <li
@@ -24,7 +24,7 @@ const getClassName = (index) => `img-${index + 1}`;
                     alt={item.alt}
                 />
                 <div class="w-full inset-0 h-full container-tarjet ">
-                    <div class="inset-0 w-full h-2/4 bg-black/70 absolute tarjet-info flex flex-col">
+                    <div class="inset-0 w-full h-2/4 p-2 bg-black/70 absolute tarjet-info flex flex-col">
                         <div class="flex text-white w-full h-full overflow-hidden flex-col">
                             <h3 class="text-[14px] md:text-[24px] lg:text-[32px] font-bold">
                                 {item.alt}
