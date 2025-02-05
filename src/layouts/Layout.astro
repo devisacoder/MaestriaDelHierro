@@ -8,6 +8,7 @@ import AboutUs from "../components/AboutUs/About-us.astro";
 import Portfolio from "../components/Portfolio/Portfolio.astro";
 import VisitUs from "../components/VisitUs/Visit-Us.astro";
 import Footer from "../components/Footer/Footer.astro";
+import SVGWhatsapp from "../../public/assets/SVG-whatsapp.astro";
 ---
 
 <!doctype html>
@@ -29,6 +30,9 @@ import Footer from "../components/Footer/Footer.astro";
 		<Portfolio/>
 		<VisitUs/>
 		<Footer/>
+		<div class="fixed bottom-4 right-4">
+			<SVGWhatsapp/>
+		</div>
 	</body>
 </html>
 
@@ -39,5 +43,20 @@ import Footer from "../components/Footer/Footer.astro";
 		padding: 0;
 		overflow-x: hidden;
 		scroll-behavior: smooth;
+		::-webkit-scrollbar {
+  			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+  			background: rgb(41, 39, 39);
+  			backdrop-filter: blur(10px);
+
+		}
+
+		::-webkit-scrollbar-thumb {
+  			background: rgba(223, 128, 5, 0.8);
+  			border-radius: 10px;
+  			border: 2px solid rgb(54, 52, 52);
+		}
 	}
 </style>

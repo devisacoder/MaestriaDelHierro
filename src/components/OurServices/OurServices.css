@@ -4,7 +4,7 @@
 }
 
 .images-example:hover {
-    transform: scale(1.3) !important;
+    transform: scale(1.2) !important;
     z-index: 50;
     opacity: 1 !important;
 }

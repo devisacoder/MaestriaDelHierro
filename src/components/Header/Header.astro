@@ -1,7 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
 ---
-<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8 py-2">
+<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8 py-4">
   <div class="flex items-center">
     <a href="#inicio" aria-label="Ir al inicio">
       <Image src="/public/assets/logo.WEBP" 
@@ -12,7 +12,7 @@ import Image from "astro/components/Image.astro";
         loading="eager"
        />
     </a> 
-    <h1 class="text-grisClaro text-[10px] sm:text-[12px] lg:text-[16px] ml-2 hidden lg:block">
+    <h1 class="text-grisClaro text-[10px] sm:text-[12px] lg:text-[16px] ml-2 hidden underline-offset-[5px] underline decoration-custom_yellow decoration-[3px] lg:block">
       MAESTRÍA DEL HIERRO
     </h1>
   </div>
@@ -24,12 +24,12 @@ import Image from "astro/components/Image.astro";
 
     <!-- Menú de navegación -->
     <nav id="nav-menu" class="hidden sm:flex absolute sm:relative top-[60px] sm:top-0 right-0 bg-azulPetroleo sm:bg-transparent w-full sm:w-auto flex-col sm:flex-row text-center ">
-      <ul class="flex flex-col sm:flex-row text-grisClaro text-[14px] sm:text-[18px] lg:text-[20px] gap-3 sm:gap-6 p-4 sm:p-0 font-roboto">
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="#nosotros" class="nav-link">Nosotros</a></li> 
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-        <li><a href="#contacto" class="nav-link">Contáctenos</a></li>
+      <ul class="flex flex-col sm:flex-row text-grisClaro text-[14px] sm:text-[18px] lg:text-[20px] md:gap-x-8 sm:gap-6 p-4 sm:p-0 font-roboto">
+        <li><a href="#inicio" class="nav-link hover:text-yellow focus:text-yellow">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link hover:text-yellow focus:text-yellow">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link hover:text-yellow focus:text-yellow">Nosotros</a></li> 
+        <li><a href="#portfolio" class="nav-link hover:text-yellow focus:text-yellow">Portfolio</a></li>
+        <li><a href="#contacto" class="nav-link hover:text-yellow focus:text-yellow">Contáctenos</a></li>
       </ul>
     </nav>
   </div>
