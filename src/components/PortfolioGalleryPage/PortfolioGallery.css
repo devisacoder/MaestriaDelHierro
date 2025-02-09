@@ -1,0 +1,183 @@
+.containerPortfolio {
+    display: grid;
+    gap: 16px;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
+    margin-top: 7%;
+}
+.image-1 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.image-2 {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.image-3 {
+    grid-column: span 2;
+    grid-row: span 1;
+
+}
+.image-4 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.image-5 {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.image-6 {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.image-7 {
+    grid-column: span 1;
+    grid-row: span 1;
+} 
+.image-8{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.image-9{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.image-10{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.image-11{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.image-12{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.container-info{
+    position: absolute;
+    opacity: 0;
+    transition: ease-in .3s;
+}
+.container-info:hover{
+    opacity: 90;
+}
+.tarjet{
+    background-color: rgba(0, 0, 0, 0.788);
+    transform: translateY(100%);
+}
+
+@media(min-width:320px) and (max-width:600px){
+    .containerPortfolio {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 11.5%);
+        margin-top: 14%;
+    }
+    .image-1 {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+    .image-2 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-3 {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+    .image-4 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-5 {
+        grid-column: span 5;
+        grid-row: span 1;
+    }
+    .image-6 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-7 {
+        grid-column: span 3;
+        grid-row: span 2;
+    } 
+    .image-8{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-9{
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    .image-10{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .image-11{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-12{
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}
+
+@media(min-width:600px) and (max-width:1000px){
+    .containerPortfolio {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 16%);
+        margin-top: 10%;
+    }
+    .image-1 {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .image-2 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-3 {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    .image-4 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-5 {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+    .image-6 {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+    .image-7 {
+        grid-column: span 3;
+        grid-row: span 1;
+    } 
+    .image-8{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-9{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-10{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .image-11{
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+    .image-12{
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}

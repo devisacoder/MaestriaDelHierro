@@ -8,43 +8,36 @@
 .img-1 {
     grid-column: span 2;
     grid-row: span 4;
-    /* border: 4px solid#9e2289; */
 }
 
 .img-2 {
     grid-column: span 1;
     grid-row: span 4;
-    /* border: 4px solid#FC9B3C; */
 }
 
 .img-3 {
     grid-column: span 2;
     grid-row: span 3;
-    /* border: 4px solid#FC9B3C; */
 
 }
 
 .img-4 {
     grid-column: span 1;
     grid-row: span 3;
-    /* border: 4px solid#FC9B3C; */
 }
 
 .img-5 {
     grid-column: span 1;
     grid-row: span 3;
-    /* border: 4px solid#9e2289; */
 }
 
 .img-6 {
     grid-column: span 1;
     grid-row: span 2;
-    /* border: 4px solid#FC9B3C; */
 }
 
 .img-7 {
     grid-column: span 2;
-    /* border: 4px solid#9e2289; */
     grid-row: span 2;
 }
 
@@ -62,7 +55,7 @@
 .container-tarjet:hover{
     opacity: 90;
 }
-/*  */
+
 .button-tarjet {
     border: 2px solid #FC9B3C;
 }
@@ -71,19 +64,6 @@
     background-color: #FC9B3C;
     color: black;
 }
-
-.title-portfolio{
-    opacity: 5%;
-    transform: translateY(-50%);
-    transition: ease 1s;
-}
-
-.title-is-visible{
-    transition: ease .5s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
 
 @media (max-width: 768px) {
     .bento-container {
@@ -107,12 +87,10 @@
 }
 
 @media (max-width: 800px) {
-    /* Ocultar elementos con borde naranja */
     .img-2, .img-4, .img-6 {
         display: none;
     }
     
-    /* Reajustar grid para elementos visibles */
     .container-img-portfolio {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 18%);

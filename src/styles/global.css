@@ -17,5 +17,5 @@
     overscroll-behavior: contain;
 }
 body {
-  min-height: 100vh; /* Misma altura en todas las páginas */
+  min-height: 100vh;
 }

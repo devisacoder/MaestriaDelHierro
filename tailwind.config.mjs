@@ -21,6 +21,7 @@ export default {
 			},
 			boxShadow: {
 				custom: '0 4px 10px rgba(0, 0, 0, 0.20)',
+				footer: '8px 4px 18px rgba(0, 0, 0, 0.30)'
 			}
 		},
 		screens: {

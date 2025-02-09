@@ -34,4 +34,4 @@ export const itemsImg = [
       alt: "Porton de garaje", 
       description:"Porton para garaje blanco grande" 
     },
-  ];
+];

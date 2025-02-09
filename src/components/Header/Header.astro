@@ -1,9 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
 ---
-<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8 py-4">
+<header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8">
   <div class="flex items-center">
-    <a href="#inicio" aria-label="Ir al inicio">
+    <a href="/" id="logo-link" aria-label="Ir al inicio">
       <Image src="/public/assets/logo.WEBP" 
         alt="Logo de Maestría del Hierro" 
         class="w-[40px] sm:w-[50px] md:w-[60px]"
@@ -17,19 +17,19 @@ import Image from "astro/components/Image.astro";
     </h1>
   </div>
   <div>
-  <!-- Botón del menú hamburguesa (aparece en móviles) -->
+    <!-- Botón del menú hamburguesa (aparece en móviles) -->
     <button id="menu-toggle" class="sm:hidden text-white text-[24px]">
       ☰
     </button>
 
     <!-- Menú de navegación -->
-    <nav id="nav-menu" class="hidden sm:flex absolute sm:relative top-[60px] sm:top-0 right-0 bg-azulPetroleo sm:bg-transparent w-full sm:w-auto flex-col sm:flex-row text-center ">
+    <nav id="nav-menu" class="hidden sm:flex absolute sm:relative top-[60px] sm:top-0 right-0  sm:bg-transparent w-full sm:w-auto flex-col sm:flex-row text-center">
       <ul class="flex flex-col sm:flex-row text-grisClaro text-[14px] sm:text-[18px] lg:text-[20px] md:gap-x-8 sm:gap-6 p-4 sm:p-0 font-roboto">
-        <li><a href="#inicio" class="nav-link hover:text-yellow focus:text-yellow">Inicio</a></li>
-        <li><a href="#servicios" class="nav-link hover:text-yellow focus:text-yellow">Servicios</a></li>
-        <li><a href="#nosotros" class="nav-link hover:text-yellow focus:text-yellow">Nosotros</a></li> 
-        <li><a href="#portfolio" class="nav-link hover:text-yellow focus:text-yellow">Portfolio</a></li>
-        <li><a href="#contacto" class="nav-link hover:text-yellow focus:text-yellow">Contáctenos</a></li>
+        <li><a href="/" class="nav-link" data-target="inicio">Inicio</a></li>
+        <li><a href="/#servicios" class="nav-link" data-target="servicios">Servicios</a></li>
+        <li><a href="/#nosotros" class="nav-link" data-target="nosotros">Nosotros</a></li> 
+        <li><a href="/#portfolio" class="nav-link" data-target="portfolio">Portfolio</a></li>
+        <li><a href="/#contacto" class="nav-link" data-target="contacto">Contáctenos</a></li>
       </ul>
     </nav>
   </div>
@@ -37,11 +37,41 @@ import Image from "astro/components/Image.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const logoLink = document.getElementById("logo-link");
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
-    header.classList.add("opacity-100", "transition-opacity", "duration-700");
+    function scrollToSection(targetId) {
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (event) => {
+        const targetId = link.getAttribute("data-target");
+
+        if (targetId && document.getElementById(targetId)) {
+          event.preventDefault();
+          scrollToSection(targetId);
+
+          // Cerrar menú en móviles
+          if (window.innerWidth < 640) {
+            navMenu.classList.add("hidden");
+          }
+        }
+      });
+    });
+
+    // Scroll suave para el logo sin recargar la página
+    logoLink.addEventListener("click", (event) => {
+      if (window.location.pathname === "/") {
+        event.preventDefault();
+        scrollToSection("inicio");
+      }
+    });
 
     // Menú hamburguesa en móviles
     menuToggle.addEventListener("click", () => {

@@ -2,15 +2,15 @@
 import Image from "astro/components/Image.astro";
 
 ---
-
-<div class="fixed bottom-4 right-4">
+<div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8">
     <a href="https://wa.me/3012256811" class="cursor-pointer">
         <Image 
             src="/assets/logoWhatsapp.svg" 
             alt="icono para comunicacion al whatsapp" 
             loading="eager" 
-            width={60} 
-            height={60}
+            width={50} 
+            height={50}
+            class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]"
         />
     </a>
 </div>
