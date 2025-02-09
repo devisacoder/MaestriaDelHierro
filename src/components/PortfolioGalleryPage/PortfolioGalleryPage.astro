@@ -11,10 +11,9 @@ const getClassName = (index) => `image-${index + 1}`;
         {imgsPortfolio.map((item, index) => (
             <li
                 key={index} 
-                class={`${getClassName(index)} relative overflow-hidden rounded-lg shadow-black cursor-pointer`}
+                class={`${getClassName(index)} relative overflow-hidden rounded-lg  cursor-pointer`}
                 aria-labelledby={`portfolioItem${index}`}
             >
-                {/* <h1 class="text-white">{index + 1}</h1> */}
                 <Image
                     class="w-full h-full target-image object-cover"
                     src={item.src}
@@ -26,6 +25,7 @@ const getClassName = (index) => `image-${index + 1}`;
                 <div class="w-full inset-0 h-full container-info ">
                     <div class="inset-0 w-full h-2/4 p-2 bg-black/70 absolute tarjet flex flex-col">
                         <div class="flex text-white w-full h-full overflow-hidden flex-col">
+                            {/* <h1 class="text-white">{index + 1}</h1> */}
                             <h3 class="text-[8px] md:text-[24px] lg:text-[32px] font-bold">
                                 {item.alt}
                             </h3>
