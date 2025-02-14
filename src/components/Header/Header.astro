@@ -4,7 +4,7 @@ import Image from "astro/components/Image.astro";
 <header class="flex items-center justify-between shadow-custom bg-azulPetroleo fixed w-full z-[1000] px-4 sm:px-8">
   <div class="flex items-center">
     <a href="/" id="logo-link" aria-label="Ir al inicio">
-      <Image src="/public/assets/logo.WEBP" 
+      <Image src="/assets/logo.WEBP" 
         alt="Logo de Maestría del Hierro" 
         class="w-[40px] sm:w-[50px] md:w-[60px]"
         width={100}
@@ -18,13 +18,13 @@ import Image from "astro/components/Image.astro";
   </div>
   <div>
     <!-- Botón del menú hamburguesa (aparece en móviles) -->
-    <button id="menu-toggle" class="sm:hidden text-white text-[24px]">
+    <button id="menu-toggle" class="sm:hidden text-white text-[24px] bg-azulPetroleo">
       ☰
     </button>
 
     <!-- Menú de navegación -->
-    <nav id="nav-menu" class="hidden sm:flex absolute sm:relative top-[60px] sm:top-0 right-0  sm:bg-transparent w-full sm:w-auto flex-col sm:flex-row text-center">
-      <ul class="flex flex-col sm:flex-row text-grisClaro text-[14px] sm:text-[18px] lg:text-[20px] md:gap-x-8 sm:gap-6 p-4 sm:p-0 font-roboto">
+    <nav id="nav-menu" class="hidden sm:flex absolute sm:relative right-0 bg-azulPetroleo w-full sm:w-auto flex-col sm:flex-row text-center">
+      <ul class="flex flex-col sm:flex-row text-grisClaro text-[18px] sm:text-[18px] lg:text-[20px] md:gap-x-8 sm:gap-10 p-4 sm:p-0 font-roboto">
         <li><a href="/" class="nav-link" data-target="inicio">Inicio</a></li>
         <li><a href="/#servicios" class="nav-link" data-target="servicios">Servicios</a></li>
         <li><a href="/#nosotros" class="nav-link" data-target="nosotros">Nosotros</a></li> 
@@ -57,7 +57,6 @@ import Image from "astro/components/Image.astro";
           event.preventDefault();
           scrollToSection(targetId);
 
-          // Cerrar menú en móviles
           if (window.innerWidth < 640) {
             navMenu.classList.add("hidden");
           }
@@ -65,7 +64,6 @@ import Image from "astro/components/Image.astro";
       });
     });
 
-    // Scroll suave para el logo sin recargar la página
     logoLink.addEventListener("click", (event) => {
       if (window.location.pathname === "/") {
         event.preventDefault();
@@ -73,9 +71,15 @@ import Image from "astro/components/Image.astro";
       }
     });
 
-    // Menú hamburguesa en móviles
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (event) => {
       navMenu.classList.toggle("hidden");
+      event.stopPropagation(); 
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        navMenu.classList.add("hidden");
+      }
     });
   });
 </script>
