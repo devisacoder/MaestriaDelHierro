@@ -10,13 +10,24 @@ import LinkWhatsapp from "../components/linkWhatsapp/LinkWhatsapp.astro";
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width"/>
-	<link rel="shortcut icon" href="/assets/logo.ico?=2"/>
+	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
 	<meta name="generator" content={Astro.generator} />
 	<title>Maestría del Hierro</title>
+	\
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Maestría del Hierro",
+		  "url": "https://maestriadelhierro.com",
+		  "logo": "https://maestriadelhierro.com/assets/favicon.ico"
+		}
+		</script>
+		
 </head>
 <body>
 	<Header />
-	<slot /> <!-- Aquí se inyectará el contenido de cada página -->
+	<slot />
 	<Footer />
 	<LinkWhatsapp />
 </body>
