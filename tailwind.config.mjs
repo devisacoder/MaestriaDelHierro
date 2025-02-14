@@ -15,7 +15,6 @@ export default {
 			fontFamily: {
 				sans: ['Roboto', 'sans-serif'], 
 				work: ['Work Sans', 'sans-serif'], 
-				sawarabi: ['Sawarabi Mincho', 'serif'],
 				raleway: ['Releway', 'serif'],
 				robotoSlab: ['Roboto Slab', 'serif']
 			},

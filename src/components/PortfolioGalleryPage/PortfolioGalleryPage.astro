@@ -1,7 +1,7 @@
 ---
 import { imgsPortfolio } from "./imgsPortfolio.js";
 import './PortfolioGallery.css'
-import Image from "astro/components/Image.astro";
+import { Image } from "@astrojs/image/components";
 
 const getClassName = (index) => `image-${index + 1}`;
 ---
