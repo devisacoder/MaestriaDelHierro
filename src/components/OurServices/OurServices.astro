@@ -1,8 +1,7 @@
 ---
 import { items } from "./images";
 import "./OurServices.css";
-import { Image } from "@astrojs/image/components";
-
+import Image from "astro/components/Image.astro";
 ---
 <section id="servicios" class="w-full bg-azulPetroleo py-12 md:py-16 ">
     <div class="w-full flex flex-col md:flex-row items-center md:justify-normal justify-between gap-8 lg:gap-12 xl:gap-16 flex-nowrap">
@@ -25,7 +24,7 @@ import { Image } from "@astrojs/image/components";
                             src={item.src}
                             width={100}
                             height={100}
-                            loading="lazy eager"
+                            loading="lazy"
                             alt={`Imagen de servicio: ${item.alt}`}
                         />
                         <div class="absolute inset-0 bg-black/20 hover:bg-black/30 transition-colors"></div>
