@@ -11,10 +11,6 @@
 #servicios, #nosotros, #portfolio, #contacto {
     scroll-margin-top: 80px;
   }
-  
-  .overscroll-contain {
-    overscroll-behavior: contain;
-}
 body {
   min-height: 100vh;
 }

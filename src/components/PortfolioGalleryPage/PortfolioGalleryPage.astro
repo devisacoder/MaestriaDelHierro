@@ -1,40 +1,119 @@
 ---
-import { imgsPortfolio } from "./imgsPortfolio.js";
 import './PortfolioGallery.css'
 import Image from "astro/components/Image.astro";
-
-const getClassName = (index) => `image-${index + 1}`;
 ---
+
 <section id="portfolio" class="w-full bg-azulPetroleo flex flex-col items-center justify-center ">
-    <ul class="w-[90%] containerPortfolio">
-        
-        {imgsPortfolio.map((item, index) => (
-            <li
-                key={index} 
-                class={`${getClassName(index)} relative overflow-hidden rounded-lg  cursor-pointer`}
-                aria-labelledby={`portfolioItem${index}`}
-            >
-                <Image
-                    class="w-full h-full target-image object-cover"
-                    src={item.src}
-                    width={100}
-                    height={100}
-                    loading="eager"
-                    alt={item.alt}
-                />
-                <div class="w-full inset-0 h-full container-info ">
-                    <div class="inset-0 w-full h-[50%] p-2 bg-black/70 absolute tarjet flex flex-col">
-                        <div class="flex text-white w-full h-full overflow-hidden flex-col">
-                            <h3 class="text-[8px] md:text-[10px] lg:text-[18px] font-bold">
-                                {item.alt}
-                            </h3>
-                            <p class="text-grisClaro text-[6px] md:text-[8px] lg:text-[14px]  break-words whitespace-normal truncate">
-                                {item.description}
-                            </p>
-                        </div>
-                    </div>
+    <ul class="w-[90%] containerPortfolio text-white">
+
+        <li class="image-1 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/barandilla.webp" width={100} height={100} loading="eager" alt="Barandilla pequeña para escalera" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full  h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[20px] font-bold">Pasamanos pequeña para escalera</h3>
                 </div>
-            </li>
-        ))}
+            </div>
+        </li>
+
+        <li class="image-2 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/cortinaPanPa_Ya.webp" width={100} height={100} loading="eager" alt="Cortina para Pan Pa' Ya" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[30px] font-bold">Cortina para Pan Pa' Ya</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-3 relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/cortinaPopsy.webp" width={100} height={100} loading="eager" alt="Cortina para Popsy" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[8px] md:text-[16px] lg:text-[30px] font-bold">Cortina para Popsy</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-4 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/puertaCuadros.webp" width={100} height={100} loading="eager" alt="Puerta gruesa" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[30px] font-bold">Puerta doble chapa</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-5 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/portonConjunto.webp" width={100} height={100} loading="eager" alt="Reja de seguridad" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[30px] font-bold">Porton para garaje de conjunto</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-6 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/rejaPerimetral.webp" width={100} height={100} loading="eager" alt="Reja perimetral para conjunto" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[30px] font-bold">Reja perimetral para conjunto</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-7 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/barandillaDeSeguridad.webp" width={100} height={100} loading="eager" alt="Escalera gruesa" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[20px] font-bold">Barandilla para altillo</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-8 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/barandillaLarga.webp" width={100} height={100} loading="eager" alt="Escalera gruesa" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[30px] font-bold">Pasamanos de seguridad</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-9 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/escaleraGruesa.webp" width={100} height={100} loading="eager" alt="Escalera gruesa" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[14px] md:text-[16px] lg:text-[20px] font-bold">Escalera flotante</h3>
+                </div>
+            </div>
+        </li>
+
+        
+        <li class="image-10 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/rejaParaContadorGas.webp" width={100} height={100} loading="eager" alt="Techo largo en policarbonato" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[12px] md:text-[14px] lg:text-[20px] font-bold">Rejilla para contador de gas</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-11 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/rejaParaContadorLuz.webp" width={100} height={100} loading="eager" alt="Techo largo en policarbonato" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[12px] md:text-[14px] lg:text-[20px] font-bold">Rejilla para contador de luz</h3>
+                </div>
+            </div>
+        </li>
+
+        <li class="image-12 border-[1px] border-borde relative overflow-hidden rounded-lg cursor-pointer">
+            <Image class="w-full h-full target-image object-cover" src="/assets/techoLargoPolicarbonato.webp" width={100} height={100} loading="eager" alt="Techo largo en policarbonato" />
+            <div class="w-full inset-0 h-full container-info">
+                <div class="inset-0 w-full h-3/6 p-2 bg-black/70 absolute tarjet flex flex-col">
+                    <h3 class="text-[12px] md:text-[14px] lg:text-[26px] font-bold">Techo largo en policarbonato</h3>
+                </div>
+            </div>
+        </li>
+
     </ul> 
 </section>

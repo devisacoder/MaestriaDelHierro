@@ -13,12 +13,22 @@ import LinkWhatsapp from "../components/linkWhatsapp/LinkWhatsapp.astro";
 	<link rel="shortcut icon" href="/assets/logo.ico?=2"/>
 	<meta name="generator" content={Astro.generator} />
 	<meta name="description" content="Maestría del Hierro ofrece servicios de soldadura y ornamentación en Bogotá y sus alrededores. Más de 30 años de experiencia en estructuras metálicas.">
-
+	
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Maestría del Hierro",
+		  "url": "https://maestriadelhierro.com",
+		  "logo": "https://maestriadelhierro.com/assets/favicon.ico"
+		}
+	</script>
+	
 	<title>Maestría del Hierro - Soldadura y Ornamentacion</title>
 </head>
 <body>
 	<Header />
-	<slot /> <!-- Aquí se inyectará el contenido de cada página -->
+	<slot />
 	<Footer />
 	<LinkWhatsapp />
 </body>

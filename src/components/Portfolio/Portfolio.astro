@@ -1,50 +1,93 @@
 ---
 import Image from "astro/components/Image.astro";
-import { itemsImg } from "./img.js";
 import "./portfolio.css";
-
-const getClassName = (index) => `img-${index + 1}`;
 ---
-<section id="portfolio" class="w-full bg-azulPetroleo flex flex-col items-center justify-center py-10 lg:py-6 md:py-6 ">
-    <h1 class="text-yellow font-sans text-[26px] md:text-[30px] lg:text-[48px] font-semibold p-6 tracking-wide">Proyectos</h1>
-    <ul class="w-[90%] cursor-pointer grid grid-cols-4 grid-rows-4 container-img-portfolio">
 
-        {itemsImg.map((item, index) => (
-            <li
-                key={index} 
-                class={`${getClassName(index)} relative overflow-hidden rounded-lg shadow-sm shadow-black`}
-                aria-labelledby={`portfolio-item-${index}`}
-                >
-                <Image
-                    class="w-full h-full target-image object-cover"
-                    src={item.src}
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                    alt={item.alt}
-                />
-                <div class="w-full inset-0 h-full container-tarjet ">
-                    <div class="inset-0 w-full h-2/4 p-2 bg-black/70 absolute tarjet-info flex flex-col">
-                        <div class="flex text-white w-full h-full overflow-hidden flex-col">
-                            <h3 class="text-[14px] md:text-[24px] lg:text-[32px] font-bold">
-                                {item.alt}
-                            </h3>
-                            <p class="text-grisClaro text-[10px] md:text-[12px] lg:text-[20px]  break-words whitespace-normal truncate">
-                                {item.description}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        ))}
-    </ul> 
-    <div class="flex justify-center p-4">
-        <a 
-            href="/portfolio" 
-            class="button-tarjet self-end text-grisClaro lg:w-[168px] lg:h-[51px] md:w-[120px] md:h-[40px] h-[34px] w-[110px] lg:text-[24px] md:text-[18px] text-[14px] flex items-center justify-center"
-            aria-label="Ver más proyectos"
-        >
-        Ver más
+<section id="portfolio" class="w-full bg-azulPetroleo flex flex-col items-center justify-center py-10 lg:py-6 md:py-6">
+  <h1 class="text-yellow font-sans text-[26px] md:text-[30px] lg:text-[48px] font-semibold p-6 tracking-wide">Proyectos</h1>
+  
+  <ul class="w-[90%] cursor-pointer grid grid-cols-4 grid-rows-4 container-img-portfolio">
+    
+    <li class="img-1 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-1">
+      <Image class="w-full h-full target-image object-cover" src="/assets/parqueInfantil.webp" width={100} height={100} loading="lazy" alt="Parque infantil" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Parque infantil</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="img-2 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-2">
+      <Image class="w-full h-full target-image object-cover" src="/assets/puertaNegra.webp" width={100} height={100} loading="lazy" alt="Puerta negra" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] vlg:text-[40px] font-bold">Puerta de seguridad</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="img-3 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-3">
+      <Image class="w-full h-full target-image object-cover" src="/assets/ventanaBlanca.webp" width={100} height={100} loading="lazy" alt="Ventana blanca" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Rejilla para ventana</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="img-4 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-4">
+      <Image class="w-full h-full target-image object-cover" src="/assets/escaleraDelgada.webp" width={100} height={100} loading="lazy" alt="Escalera sencilla" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Escalera flotante</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="img-5 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-5">
+      <Image class="w-full h-full target-image object-cover" src="/assets/techo.webp" width={100} height={100} loading="lazy" alt="Marquesina" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Marquesinas</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="img-6 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-6">
+      <Image class="w-full h-full target-image object-cover" src="/assets/escaleraFlotante.webp" width={100} height={100} loading="lazy" alt="Puerta rejilla" />
+      <div class="w-full inset-0 h-full container-tarjet">
+        <div class="inset-0 w-full h-4/5 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+          <div class="flex text-white w-full h-full overflow-hidden flex-col">
+            <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Escalera flotante</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="img-7 relative overflow-hidden rounded-lg shadow-sm shadow-black" aria-labelledby="portfolio-item-6">
+        <Image class="w-full h-full target-image object-cover" src="/assets/puertaYVentanaDeAluminio.webp" width={100} height={100} loading="lazy" alt="Puerta rejilla" />
+        <div class="w-full inset-0 h-full container-tarjet">
+          <div class="inset-0 w-full h-5/6 p-2 bg-black/70 absolute tarjet-info flex flex-col">
+            <div class="flex text-white w-full h-full overflow-hidden flex-col">
+              <h3 class="text-[20px] md:text-[34px] lg:text-[40px] font-bold">Puerta y porton para casa</h3>
+          </div>
+        </div>
+      </li>
+    
+  </ul>
+
+  <div class="flex justify-center p-4">
+    <a href="/portfolio" class="button-tarjet self-end text-grisClaro lg:w-[168px] lg:h-[51px] md:w-[120px] md:h-[40px] h-[34px] w-[110px] lg:text-[24px] md:text-[18px] text-[20px] flex items-center justify-center" aria-label="Ver más proyectos">
+      Ver más
     </a>
-    </div>
+  </div>
 </section>
