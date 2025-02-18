@@ -12,6 +12,10 @@ import LinkWhatsapp from "../components/linkWhatsapp/LinkWhatsapp.astro";
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="shortcut icon" href="/assets/logo.ico?=2"/>
 	<meta name="generator" content={Astro.generator} />
+	<link rel="preload" as="image" href="/assets/videoHero.webp" />  
+	<link rel="preload" as="image" href="/assets/videoHero.webp" media="(min-width: 769px)">
+	<link rel="preload" as="image" href="/assets/videoHero-mobile.webp" media="(max-width: 768px)">
+
 	<meta name="description" content="Maestría del Hierro ofrece servicios de soldadura y ornamentación en Bogotá y sus alrededores. Más de 30 años de experiencia en estructuras metálicas.">
 	
 	<script type="application/ld+json">
